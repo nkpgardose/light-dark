@@ -1,0 +1,16 @@
+body {
+  background-color: var(--surface);
+}
+
+.label {
+  color: var(--content);
+}
+
+.form-control {
+  color: var(--content);
+}
+
+.btn {
+  background-color: var(--surface);
+  color: var(--content);
+}

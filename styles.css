@@ -1,0 +1,34 @@
+:root {
+  --content: hsl(0, 0, 0);
+  --surface: hsl(0, 0, 100%);
+}
+
+/* User specific webpage preference */
+.light {
+  color-scheme: light;
+  --content: hsl(0, 0, 0);
+  --surface: hsl(0, 0, 100%);
+}
+
+.dark {
+  color-scheme: dark;
+  --content: hsl(0, 0, 100%);
+  --surface: hsl(0, 0, 0);
+}
+
+/* System preference */
+@media (prefers-color-scheme: light) {
+  :root:not(.light):not(.dark) {
+    color-scheme: light;
+    --content: hsl(0, 0, 0);
+    --surface: hsl(0, 0, 100%);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not(.light):not(.dark) {
+    color-scheme: dark;
+    --content: hsl(0, 0, 100%);
+    --surface: hsl(0, 0, 0);
+  }
+}
