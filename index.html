@@ -1,40 +1,40 @@
 <!DOCTYPE html>
 <html lang="en" id="demo">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>light and dark mode</title>
-  <link href="./styles.css" rel="stylesheet">
-  <link href="./form.css" rel="stylesheet">
-</head>
-<body>
-  <form>
-    <label css="label" for="name">Name</label>
-    <input class="form-control" type="text" id="name" />
-    <label css="label" for="email">Email address</label>
-    <input class="form-control" type="email" id="email" />
-    <label css="label"> <input type="checkbox" /> Remember me </label>
-    <label css="label"> <input type="radio" id="potato" name="radio-group-example" checked /> Potato </label>
-    <label css="label"> <input type="radio" id="tomato" name="radio-group-example" /> Tomato </label>
-    <button class="btn" type="submit">Submit</button>
-  </form>
-  <div>
-    <button onclick="lightMode()" class="btn" type="button">Use light mode</button>
-    <button onclick="darkMode()" class="btn" type="button">Use dark mode</button>
-  </div>
-  <script>
-    function lightMode() {
-      const elem = document.getElementById("demo")
-      elem.classList.remove("dark");
-      elem.classList.add("light");
-    };
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>light and dark mode</title>
+    <link href="./styles.css" rel="stylesheet">
+    <link href="./form.css" rel="stylesheet">
+  </head>
+  <body>
+    <form>
+      <label css="label" for="name">Name</label>
+      <input class="form-control" type="text" id="name" />
+      <label css="label" for="email">Email address</label>
+      <input class="form-control" type="email" id="email" />
+      <label css="label"> <input type="checkbox" /> Remember me </label>
+      <label css="label"> <input type="radio" id="potato" name="radio-group-example" checked /> Potato </label>
+      <label css="label"> <input type="radio" id="tomato" name="radio-group-example" /> Tomato </label>
+      <button class="btn" type="submit">Submit</button>
+    </form>
+    <div>
+      <button onclick="lightMode()" class="btn" type="button">Use light mode</button>
+      <button onclick="darkMode()" class="btn" type="button">Use dark mode</button>
+    </div>
+    <script>
+      function lightMode() {
+        const elem = document.getElementById("demo")
+        elem.classList.remove("dark");
+        elem.classList.add("light");
+      };
 
-    function darkMode() {
-      const elem = document.getElementById("demo")
-      elem.classList.remove("light");
-      elem.classList.add("dark");
-    }
-  </script> 
-</body>
+      function darkMode() {
+        const elem = document.getElementById("demo")
+        elem.classList.remove("light");
+        elem.classList.add("dark");
+      }
+    </script>
+  </body>
 </html>
