@@ -1,3 +1,4 @@
+/* Default theme, in this case, by default it is light theme */
 :root {
   --content: hsl(0, 0, 0);
   --surface: hsl(0, 0, 100%);
@@ -10,19 +11,11 @@
 
 .dark {
   color-scheme: dark;
-  --content: hsl(0, 0, 100%);
-  --surface: hsl(0, 0, 0);
 }
 
 /* System preference fallback */
-@media (prefers-color-scheme: light) {
-  :root:not(.light):not(.dark) {
-    color-scheme: light;
-  }
-}
-
 @media (prefers-color-scheme: dark) {
-  :root:not(.light):not(.dark) {
+  :root:not(.light) {
     color-scheme: dark;
     --content: hsl(0, 0, 100%);
     --surface: hsl(0, 0, 0);
