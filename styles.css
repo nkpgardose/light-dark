@@ -6,8 +6,6 @@
 /* User specific webpage preference */
 .light {
   color-scheme: light;
-  --content: hsl(0, 0, 0);
-  --surface: hsl(0, 0, 100%);
 }
 
 .dark {
@@ -16,12 +14,10 @@
   --surface: hsl(0, 0, 0);
 }
 
-/* System preference */
+/* System preference fallback */
 @media (prefers-color-scheme: light) {
   :root:not(.light):not(.dark) {
     color-scheme: light;
-    --content: hsl(0, 0, 0);
-    --surface: hsl(0, 0, 100%);
   }
 }
 
